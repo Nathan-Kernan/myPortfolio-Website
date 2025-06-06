@@ -783,6 +783,24 @@ footer .container {
     justify-content: center;
 }
 
+.proficiency-dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+.proficiency-dot.advanced {
+    background: #28a745; /* green */
+}
+.proficiency-dot.intermediate {
+    background: #ffc107; /* yellow */
+}
+.proficiency-dot.beginner {
+    background: #dc3545; /* red */
+}
+
 /* Under Development Section */
 .under-development {
     padding: 60px 0;
