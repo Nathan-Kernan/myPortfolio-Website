@@ -7,6 +7,12 @@
     padding: 0;
 }
 
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: sans-serif; /* Choose a suitable font */
     line-height: 1.6;
@@ -61,12 +67,6 @@ hr {
     background-color: #ededed;
     transform: scale(1.1); /* Slightly increase the size */
     transition: transform 0.4s ease, color 0.4s ease; /* Smooth scaling and color transition */
-}
-
-html, body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
 }
 
 /* Typography */
@@ -763,7 +763,7 @@ footer .container {
     margin-bottom: 2rem;
 }
 
-.fa-solid {
+.stat-item .fa-solid {
     color: #007bff;
 }
 
