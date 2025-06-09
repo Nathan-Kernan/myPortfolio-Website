@@ -133,9 +133,9 @@ h3 {
     border-radius: 8px; /* Optional: Add rounded corners */
 }
 
-.home-services {
+.home-experience {
     padding: 60px 0;
-    background-color: #fff; /* Set the background color for the services section */
+    background-color: #fff; /* Set the background color for the experience section */
 }
 
 .home-about {
@@ -268,13 +268,13 @@ nav ul li a:hover {
     margin-bottom: 25px;
 }
 
-/* Services Section */
-.services {
+/* experience Section */
+.experience {
     padding: 60px 0;
     background-color: #f9f9f9;
 }
 
-.services-header {
+.experience-header {
     color: black;
     padding: 40px 0;
     position: relative;
@@ -284,25 +284,25 @@ nav ul li a:hover {
     gap: 20px; /* Optional: Add spacing between items */
 }
 
-.service-icon i {
+.experience-icon i {
     font-size: 2.5rem; /* Adjust icon size */
     color: #007bff;
 }
 
-.services h2 {
+.experience h2 {
     font-size: 2rem;
     text-align: center;
     margin-bottom: 30px;
     color: #222;
 }
 
-.services-grid {
+.experience-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
 }
 
-.service-item {
+.experience-item {
     display: block; /* Make the entire container clickable */
     background-color: #fff; /* Set a white background for the entire box */
     border: 1px solid #ddd; /* Add a single border around the entire box */
@@ -316,12 +316,12 @@ nav ul li a:hover {
     color: inherit; /* Inherit text color */
 }
 
-.service-item:hover {
+.experience-item:hover {
     transform: translateY(-5px); /* Slightly lift the box on hover */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Intensify the shadow on hover */
 }
 
-.service-item h3 {
+.experience-item h3 {
     font-size: 1.5rem;
     font-weight: bold;
     color: #222;
@@ -331,7 +331,7 @@ nav ul li a:hover {
     padding-bottom: 5px; /* Add spacing between the text and the underline */
 }
 
-.service-item p {
+.experience-item p {
     font-size: 1rem;
     color: #666;
     line-height: 1.6;
