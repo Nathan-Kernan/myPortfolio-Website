@@ -1,0 +1,904 @@
+/* Global */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif; /* Choose a suitable font */
+    line-height: 1.6;
+    background-color: #f4f7f6; /* Light background */
+    color: #333; /* Dark text */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+hr {
+    border: 3px solid rgb(70, 70, 70); /* Light gray line */
+    height: 50px;
+    background-color: #007bff; /* Light gray line */
+}
+
+.button {
+    margin-left: auto; /* Push the button to the far right */
+    padding: 7px 28px; /* Adjust padding for button size */
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 20px; /* Rounded button */
+    transition: background-color 0.3s ease;
+    display: inline-block; /* Ensure transform works properly */
+    font-size: 1rem; /* Adjust font size */
+    font-weight: bold; /* Make the button text bold */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow */
+}
+
+.button:hover {
+    background-color: #0056b3;
+    transform: scale(1.1); /* Slightly increase the size */
+    transition: transform 0.4s ease, color 0.4s ease; /* Smooth scaling and color transition */
+}
+
+.white-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #007bff;
+    background-color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.white-button:hover {
+    background-color: #ededed;
+    transform: scale(1.1); /* Slightly increase the size */
+    transition: transform 0.4s ease, color 0.4s ease; /* Smooth scaling and color transition */
+}
+
+/* Typography */
+.white-text {
+    color: white;
+}
+
+.white-text p {
+    font-size: .8rem;
+    word-spacing: 5px;
+}
+
+.blue-text {
+    color: rgb(0, 85, 255);
+    font-weight: bold;
+}
+
+.section-subtitle {
+    font-style: italic;
+}
+
+h1, h2, h3 {
+    margin: -5px;
+}
+
+h1 {
+    font-size: 2.5rem; /* Adjust heading size */
+}
+
+h2 {
+    font-size: 2rem; /* Adjust heading size */
+}
+
+h3 {
+    font-size: 1.5rem; /* Adjust heading size */
+    margin-top: 40px;
+}
+
+/* Home Content */
+.home-hero {
+    display: flex; /* Enable Flexbox layout */
+    align-items: center; /* Vertically align items */
+    justify-content: center; /* Center the items horizontally */
+    flex-wrap: nowrap; /* Prevent wrapping */
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px; /* Add spacing between the two divs */
+    padding: 0 20px; /* Add padding to prevent content from touching the edges */
+    box-sizing: border-box; /* Include padding in width calculations */
+}
+
+.home-profile-image {
+    flex: 1; /* Allow the image container to take up available space */
+    max-width: 50%; /* Limit the width of the image container */
+    text-align: right; /* Align the image to the right within its container */
+    padding-right: 15px; /* Add padding to prevent the image from touching the edge */
+    box-sizing: border-box; /* Ensure padding is included in the width calculation */
+}
+
+.home-profile-image img {
+    width: 100%; /* Make the image responsive */
+    max-width: 400px; /* Limit the maximum width of the image */
+    height: auto; /* Maintain the aspect ratio */
+    border-radius: 8px; /* Optional: Add rounded corners */
+}
+
+.home-experience {
+    padding: 60px 0;
+    background-color: #fff; /* Set the background color for the experience section */
+}
+
+.home-about {
+    padding: 60px 0;
+    background-color: #007bff;
+    color: white;
+}
+
+.home-projects {
+    padding: 60px 0;
+    background-color: #fff;
+}
+
+.home-blog {
+    padding: 60px 0;
+    background-color: #007bff;
+}
+
+.home-blog h1 {
+    margin-bottom: 17px;
+    margin-top: -5px;
+    color: white;
+}
+
+/* Header */
+.header-wrapper {
+    background-color: #007bff; /* Blue background behind the header */
+    padding-top: 5px; /* Add padding to create space around the header */
+    padding-bottom: 60px;
+}
+
+.header-nav {
+    text-align: center;
+    line-height: 2;
+}
+
+.header-nav h1 {
+    font-weight: normal; /* Removes bold styling */
+}
+
+header {
+    background-color: #fff; /* White background */
+    border-radius: 30px; /* Rounded header */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    max-width: 90%; /* Ensure it doesn't stretch too wide */
+    margin: 25px auto; /* Center the header horizontally */
+    overflow: hidden; /* Prevent content from overflowing */
+    padding: 0px 10px;
+}
+
+/*
+.logo {
+    margin: 0; 
+    padding: 5px; 
+    flex-shrink: 0; 
+    margin-right: auto;
+}
+
+.logo img {
+    width: 50px; 
+    height: auto; 
+    display: block; 
+}
+*/
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-container {
+    display: flex; /* Use Flexbox for alignment */
+    justify-content: center; /* Center the navigation items horizontally */
+    align-items: center; /* Center the navigation items vertically */
+    padding: 10px 20px; /* Add padding for spacing */
+    background-color: #fff; /* Optional: Ensure a consistent background */
+    min-height: 80px; /* Set a minimum height, but allow it to grow */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+nav ul {
+    display: flex; /* Use Flexbox for alignment */
+    list-style: none; /* Remove default list styling */
+    align-items: center; /* Vertically align nav items */
+    flex-wrap: wrap; /* Allow nav items to wrap on smaller screens */
+    gap: 10px; /* Add spacing between nav items */
+    margin-left: 270px; /* Center the nav items */ 
+    padding: 0; /* Remove default padding */
+}
+
+nav ul li {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-left: 20px; /* Add spacing between nav items */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: rgb(0, 85, 255);
+    transform: scale(1.3); /* Slightly increase the size */
+    transition: transform 0.6s ease, color 0.4s ease; /* Smooth scaling and color transition */
+    display: inline-block; /* Ensure the element respects the transform property */
+}
+
+/* Hero Section */
+.hero {
+    padding: 80px 0;
+    background-color: #007bff; /* Light gray background */
+}
+
+.hero-content {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+/* experience Section */
+.experience {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+.experience-header {
+    color: black;
+    padding: 40px 0;
+    position: relative;
+    display: flex; /* Enable Flexbox */
+    align-items: center; /* Vertically align items */
+    justify-content: space-between; /* Add space between the text and button */
+    gap: 20px; /* Optional: Add spacing between items */
+}
+
+.experience-icon i {
+    font-size: 2.5rem; /* Adjust icon size */
+    color: #007bff;
+}
+
+.experience h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #222;
+}
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.experience-item {
+    display: block; /* Make the entire container clickable */
+    background-color: #fff; /* Set a white background for the entire box */
+    border: 1px solid #ddd; /* Add a single border around the entire box */
+    border-radius: 8px; /* Add rounded corners to the box */
+    overflow: hidden; /* Ensure content stays within the rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: left; /* Center-align the content */
+    padding: 30px; /* Add padding inside the box */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add hover effects */
+    text-decoration: none; /* Remove underline from the link */
+    color: inherit; /* Inherit text color */
+}
+
+.experience-item:hover {
+    transform: translateY(-5px); /* Slightly lift the box on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Intensify the shadow on hover */
+}
+
+.experience-item h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #222;
+    margin-top: 10px; /* Reduce the top margin */
+    margin-bottom: 0; /* Keep consistent spacing below */
+    text-decoration: none; /* Remove default underline */
+    padding-bottom: 5px; /* Add spacing between the text and the underline */
+}
+
+.experience-item p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* About Section */
+.about {
+    padding: 80px 0;
+}
+
+.about-content {
+    display: flex; /* Flexbox layout for image and text */
+    align-items: center; /* Vertically align items */
+    gap: 40px; /* Add spacing between image and text */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.about-image {
+    flex: 1; /* Allow the image to take up space */
+    max-width: 300px; /* Limit the image size */
+    text-align: center; /* Center the image */
+}
+
+.about-image img {
+    width: 150%;
+    height: auto;
+    border-radius: 50%; /* Make the image circular */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    margin-left: -150px; /* Adjust the image position */
+}
+
+.about-text {
+    flex: 2; /* Allow the text to take up more space */
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.about-stats {
+    display: flex; /* Flexbox layout for stats */
+    gap: 20px; /* Add spacing between stats */
+    margin-bottom: 30px;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-item h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.stat-item p {
+    font-size: 1rem;
+    opacity: 0.8; /* Slightly faded text */
+}
+
+/* Education & Work Section */
+.education-work {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+.journey-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.education-work-table {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.education-work .section-subtitle,
+.education-work h2 {
+    text-align: center; /* Center-align the text */
+    margin-bottom: 20px; /* Add spacing below the elements */
+}
+
+.education-work h2 {
+    font-size: 2rem; /* Adjust the font size for the heading */
+    font-weight: bold;
+}
+
+.education-work-table h3 {
+    font-size: 1.5rem;
+    color: #222;
+    margin-bottom: 15px;
+    margin-top: 0;
+}
+
+.education-work-table ul {
+    list-style: none;
+    padding: 0;
+}
+
+.education-work-table ul li {
+    background-color: #fff; /* White background for the table */
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 15px; /* Add padding inside the box */
+    margin-bottom: 15px; /* Add spacing between items */
+    font-size: 1rem;
+    color: black;
+    margin-bottom: 10px;
+}
+.education-work-table i {
+    color: #007bff;
+    margin-left: 10px;
+}
+
+/* Projects Section */
+.projects {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.project-item {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: flex-start; /* Align content at the top */
+    height: 100%; /* Ensure consistent height for all project items */
+    background-color: #fff; /* Set a white background for the entire box */
+    border: 1px solid #ddd; /* Add a single border around the entire box */
+    border-radius: 8px; /* Add rounded corners to the box */
+    overflow: hidden; /* Ensure content stays within the rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+    text-align: center; /* Center-align the content */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add hover effects */
+    text-decoration: none; /* Remove underline from the link */
+    color: inherit; /* Inherit text color */
+}
+
+.project-item:hover {
+    transform: translateY(-5px); /* Slightly lift the box on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Intensify the shadow on hover */
+}
+
+.project-item img {
+    width: 100%; /* Make the image fill the width of the box */
+    height: 350px; /* Set a consistent height for all images */
+    object-fit: cover; /* Ensure the image fills the container without distortion */
+    border-bottom: 1px solid #ddd; /* Add a dividing line between the image and the content */
+}
+
+.project-item h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #222;
+    margin: 5px 140px;
+    text-decoration: none; /* Remove default underline */
+    border-bottom: 2px solid #575757;
+    padding-top: 10px;
+    padding-bottom: 5px; /* Add spacing between the text and the underline */
+}
+
+.project-item p {
+    margin: 15px; /* Add spacing inside the box */
+    color: #333; /* Text color */
+}
+
+.project-item .view-project {
+    margin-top: auto; /* Push the "View Project" link to the bottom */
+    display: block; /* Keep the "View Project" button styling */
+    padding: 15px 0; /* Add vertical padding */
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff; /* White text */
+    background-color: #007bff; /* Blue background */
+    text-decoration: none;
+    border-radius: 0 0 8px 8px; /* Rounded corners only at the bottom */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Blog Section */
+.blog {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+}
+
+.blog-icon {
+    font-size: .8rem; /* Adjust icon size */
+    color: grey; /* Set icon color */
+    text-align: left; /* Center the icon */
+    display: flex;
+    margin-top: 15px;
+    margin-left: 10px;
+    margin-bottom: -5px; /* Reduce spacing below the icon */
+}
+
+.blog-icon p {
+    margin-top: -4px;
+    margin-left: -13px; 
+    color: grey; /* Text color */
+    font-size: .95rem; /* Adjust text size */
+    font-weight: bold;
+    opacity: 0.85; /* Slightly faded text */
+}
+
+.blog h1 {
+    text-align: center;
+    margin-bottom: 50px;
+    color: #222;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.blog-post {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    position: relative; /* Enable positioning for the date badge */
+}
+
+.date-badge {
+    position: absolute;
+    top: 15px; /* Position the badge at the top */
+    left: 15px; /* Position the badge on the left */
+    background-color: #007bff; /* Blue background */
+    color: #fff; /* White text */
+    font-size: 0.9rem; /* Adjust font size */
+    font-weight: bold;
+    padding: 5px 10px; /* Add padding for the oval shape */
+    border-radius: 20px; /* Make it an oval */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+    z-index: 1; /* Ensure it appears above the image */
+}
+
+.blog-post img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.blog-post h3 {
+    font-size: 1.2rem; /* Adjust title size */
+    font-weight: bold;
+    color: #333;
+    margin-top: 0; /* Remove extra spacing above the title */
+    margin-left: 15px;
+    margin-bottom: 0; /* Add consistent spacing below the title */
+    text-align: left; /* Center-align the title */
+}
+
+.blog-post p {
+    padding: 0 15px 15px;
+    color: #666;
+    line-height: 1.5;
+}
+
+.blog-post a {
+    display: inline-block;
+    margin: 0 15px 15px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.blog-post a:hover {
+    background-color: #0056b3;
+}
+
+/* Contact Section */
+.contact-box {
+    background: url('Content/LincolnNECapital.jpeg') no-repeat center center/cover;
+    padding: 60px 0;
+    color: #fff; /* Ensure text is readable on the image */
+    text-align: center;
+}
+
+.contact-box .container {
+    background-color: rgba(74, 74, 74, 0.6); /* Semi-transparent overlay */
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 800px; /* Set a maximum width for the container */
+    margin: 0 auto; /* Center the container horizontally */
+}
+
+.contact-box h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-list li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.contact-list li a {
+    color: #fff; /* White text for links */
+}
+
+.contact-list li i {
+    font-size: 1.8rem;
+    color: #fff;
+}
+
+.lincoln-images {
+    padding: 30px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+    margin: 10px;
+}
+
+.lincoln-images h2 {
+    margin-top: 0;
+    margin-bottom: 30px;
+    padding-top: 20px; /* Add padding if needed */
+}
+
+.lincoln-images .container {
+    max-width: 100%; /* Allow the container to span the full width */
+    padding: 0; /* Remove default padding */
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 10px; /* Add spacing between images */
+}
+
+.image-grid img {
+    width: 100%; /* Make images span the full width of their grid cell */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+}
+
+footer .container {
+    padding: 20px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-links a {
+    font-size: 1.8rem;
+    color: #007bff;
+    transition: color 0.3s ease, transform 0.5s ease;
+}
+
+.social-links a:hover {
+    color: #0056b3;
+    transform: scale(1.3);
+}
+
+/* My Stack Page */
+.my-stack {
+    padding: 80px 0;
+}
+
+.stack-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.stack-table th, .stack-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.stack-table th {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.stack-table tr:hover {
+    background-color: #f9f9f9;
+}
+
+.stat-item {
+    margin-bottom: 2rem;
+}
+
+.stat-item .fa-solid {
+    color: #007bff;
+}
+
+.my-stack-stats {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.my-stack-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-left: 40px;
+    margin-right: 40px;
+    justify-content: center;
+}
+
+.proficiency-dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+.proficiency-dot.advanced {
+    background: #28a745; /* green */
+}
+.proficiency-dot.intermediate {
+    background: #ffc107; /* yellow */
+}
+.proficiency-dot.beginner {
+    background: #dc3545; /* red */
+}
+
+/* Under Development Section */
+.under-development {
+    padding: 60px 0;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.under-development h2 {
+    font-size: 2rem;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+.under-development p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Responsive Design (Example) */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    header .container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+        text-align: center; /* Center text for nav links */
+    }
+
+    .logo {
+        margin-bottom: 20px; /* Add spacing below the logo */
+        margin-left: auto;
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack navigation links vertically */
+        align-items: center; /* Center the stacked items */
+        gap: 10px; /* Add spacing between nav items */
+        padding: 0; /* Remove extra padding */
+        margin: 0; /* Remove extra margin */
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .hero .container,
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .home-hero {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+        text-align: center; /* Center-align text */
+    }
+
+    .about-image {
+        max-width: 200px; /* Reduce image size */
+        margin-bottom: 20px; /* Add spacing below the image */
+    }
+
+    .about-text {
+        flex: unset; /* Remove flex sizing */
+    }
+
+    .about-stats {
+        flex-direction: column; /* Stack stats vertically */
+        gap: 10px;
+    }
+
+    .home-hero,
+    .about-text {
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .home-profile-image {
+        max-width: 100%; /* Allow the image container to take full width */
+        padding: 0; /* Remove padding on smaller screens */
+    }
+
+    .home-profile-image img {
+        max-width: 300px; /* Adjust the maximum width for smaller screens */
+    }
+
+    .button {
+        margin-right: auto;
+        margin-top: 20px; /* Add spacing above the button */
+    }
+
+    .about-image img {
+        margin-left: 0;
+        width: 100%;
+        max-width: 300px;
+    }
+}
