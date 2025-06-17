@@ -1,30 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Clicker Game</title>
-  <style>
-    #game {
-      text-align: center;
-      margin-top: 100px;
-    }
-    button {
-      padding: 20px;
-      font-size: 24px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clicker Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/eaa978622c.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <div id="game">
-    <h1>Score: <span id="score">0</span></h1>
-    <button onclick="increment()">Click Me!</button>
-  </div>
+    <!-- Header Section -->
+    <div class="header-wrapper">
+        <header>
+            <div class="nav-container">
+                <nav>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../Experience/experience.html">Experience</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="../Projects/projects.html">Projects</a></li>
+                    </ul>
+                </nav>
+                <a href="contact.html" class="button">Contact Me</a>
+            </div>
+        </header>
+        <div class="header-nav">
+            <span class="white-text">
+                <h1>ABOUT ME</h1>
+                <p>HOME > ABOUT</p>
+            </span>
+        </div>
+    </div>
 
-  <script>
-    let score = 0;
-    function increment() {
-      score++;
-      document.getElementById("score").textContent = score;
-    }
-  </script>
+    <!-- Game Section -->
+    <div id="game">
+        <h1>Score: <span id="score">0</span></h1>
+        <button onclick="increment()">Click Me!</button>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Nathan Kernan. All rights reserved.</p>
+            <div class="social-links">
+                <a href="www.linkedin.com/in/nathankernan-dev" target="_blank" rel="noopener noreferrer" title="Visit my LinkedIn profile">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/Nathan-Kernan" target="_blank" rel="noopener noreferrer" title="Visit my GitHub profile">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://x.com/Dev_Kernan" target="_blank" rel="noopener noreferrer" title="Visit my Twitter profile">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="mailto:nathankernan@outlook.com" target="_blank" rel="noopener noreferrer" title="Email me">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script> 
+
 </body>
 </html>
