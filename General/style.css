@@ -280,9 +280,21 @@ nav ul li a:hover {
     font-size: 1rem;
     color: black;
 }
+
+.education-work-table ul li p {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .education-work-table i {
     color: #007bff;
     margin-left: 10px;
+}
+
+.education-work-table .button {
+    padding: 4px 14px;
+    font-size: 0.85rem;
 }
 
 /* Contact Section */
@@ -438,12 +450,23 @@ footer .container {
 
     .about-content {
         flex-direction: column;
+        align-items: center;
         text-align: center;
     }
 
     .about-image {
-        max-width: 200px;
+        max-width: 300px;
         margin-bottom: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        display: block;
+    }
+
+    .about-image img {
+        margin: 0 auto;
+        display: block;
+        max-width: 100%;
     }
 
     .about-text {
