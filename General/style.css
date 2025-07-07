@@ -11,6 +11,7 @@ html, body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 body {
@@ -123,6 +124,7 @@ nav {
 }
 
 .nav-container {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -138,7 +140,7 @@ nav ul {
     align-items: center;
     flex-wrap: wrap;
     gap: 10px;
-    margin-left: 270px;
+    margin-left: 0;
     padding: 0;
 }
 
@@ -152,6 +154,23 @@ nav ul li a {
     text-decoration: none;
     color: #555;
     transition: color 0.3s ease;
+}
+
+.nav-button {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 7px 28px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 nav ul li a:hover {

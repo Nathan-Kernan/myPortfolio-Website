@@ -107,30 +107,35 @@ h3 {
 
 /* Home Content */
 .home-hero {
-    display: flex; /* Enable Flexbox layout */
-    align-items: center; /* Vertically align items */
-    justify-content: center; /* Center the items horizontally */
-    flex-wrap: nowrap; /* Prevent wrapping */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow wrapping instead of nowrap */
     max-width: 1200px;
     margin: 0 auto;
-    gap: 20px; /* Add spacing between the two divs */
-    padding: 0 20px; /* Add padding to prevent content from touching the edges */
-    box-sizing: border-box; /* Include padding in width calculations */
+    gap: 20px;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.home-hero > div:first-child {
+    flex: 1 1 350px;      /* Allow to shrink/grow, min width 350px */
+    max-width: 1000px;     /* Prevent from getting too wide */
 }
 
 .home-profile-image {
-    flex: 1; /* Allow the image container to take up available space */
-    max-width: 50%; /* Limit the width of the image container */
-    text-align: right; /* Align the image to the right within its container */
-    padding-right: 15px; /* Add padding to prevent the image from touching the edge */
-    box-sizing: border-box; /* Ensure padding is included in the width calculation */
+    flex: 1 1 250px;
+    max-width: 400px;
+    text-align: right;
+    padding-right: 15px;
+    box-sizing: border-box;
 }
 
 .home-profile-image img {
-    width: 100%; /* Make the image responsive */
-    max-width: 400px; /* Limit the maximum width of the image */
-    height: auto; /* Maintain the aspect ratio */
-    border-radius: 8px; /* Optional: Add rounded corners */
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
 }
 
 .home-experience {
@@ -186,27 +191,13 @@ header {
     padding: 0px 10px;
 }
 
-/*
-.logo {
-    margin: 0; 
-    padding: 5px; 
-    flex-shrink: 0; 
-    margin-right: auto;
-}
-
-.logo img {
-    width: 50px; 
-    height: auto; 
-    display: block; 
-}
-*/
-
 nav {
     max-width: 1200px;
     margin: 0 auto;
 }
 
 .nav-container {
+    position: relative;
     display: flex; /* Use Flexbox for alignment */
     justify-content: center; /* Center the navigation items horizontally */
     align-items: center; /* Center the navigation items vertically */
@@ -222,7 +213,7 @@ nav ul {
     align-items: center; /* Vertically align nav items */
     flex-wrap: wrap; /* Allow nav items to wrap on smaller screens */
     gap: 10px; /* Add spacing between nav items */
-    margin-left: 270px; /* Center the nav items */ 
+    margin-left: 0; /* Center the nav items */ 
     padding: 0; /* Remove default padding */
 }
 
@@ -236,6 +227,23 @@ nav ul li a {
     text-decoration: none;
     color: #555;
     transition: color 0.3s ease;
+}
+
+.nav-button {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 7px 28px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 nav ul li a:hover {
@@ -885,6 +893,7 @@ footer .container {
     .home-profile-image {
         max-width: 100%; /* Allow the image container to take full width */
         padding: 0; /* Remove padding on smaller screens */
+        text-align: center;
     }
 
     .home-profile-image img {

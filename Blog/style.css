@@ -118,14 +118,15 @@ header {
 }
 
 nav {
-    max-width: 1200px;
-    margin: 0 auto;
+    flex: 0 1 auto;
+    display: flex;
+    justify-content: center;
 }
 
 .nav-container {
     position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Center nav horizontally */
     align-items: center;
     padding: 10px 20px;
     background-color: #fff;
@@ -139,7 +140,7 @@ nav ul {
     align-items: center;
     flex-wrap: wrap;
     gap: 10px;
-    margin-left: 0;
+    margin: 0;      /* Remove margin-left */
     padding: 0;
 }
 
@@ -179,73 +180,104 @@ nav ul li a:hover {
     display: inline-block;
 }
 
-/* Projects Section */
-.projects {
-    padding: 80px 0;
-    background-color: #fff;
+/* Blog Section */
+.blog {
+    padding: 60px 0;
+    background-color: #f9f9f9;
 }
 
-.projects-grid {
+.blog-header {
+    color: black;
+    padding: 40px 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.blog-icon {
+    font-size: .8rem; /* Adjust icon size */
+    color: grey; /* Set icon color */
+    text-align: left; /* Center the icon */
+    display: flex;
+    margin-top: 15px;
+    margin-left: 10px;
+    margin-bottom: -5px; /* Reduce spacing below the icon */
+}
+
+.blog-icon p {
+    margin-top: -4px;
+    margin-left: -13px; 
+    color: grey; /* Text color */
+    font-size: .95rem; /* Adjust text size */
+    font-weight: bold;
+    opacity: 0.85; /* Slightly faded text */
+}
+
+.blog-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 30px;
 }
 
-.project-item {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    height: 100%;
+.blog-post {
     background-color: #fff;
-    border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-decoration: none;
-    color: inherit;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    position: relative; /* Enable positioning for the date badge */
 }
 
-.project-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+.date-badge {
+    position: absolute;
+    top: 15px; /* Position the badge at the top */
+    left: 15px; /* Position the badge on the left */
+    background-color: #007bff; /* Blue background */
+    color: #fff; /* White text */
+    font-size: 0.9rem; /* Adjust font size */
+    font-weight: bold;
+    padding: 5px 10px; /* Add padding for the oval shape */
+    border-radius: 20px; /* Make it an oval */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+    z-index: 1; /* Ensure it appears above the image */
 }
 
-.project-item img {
+.blog-post img {
     width: 100%;
-    height: 350px;
-    object-fit: cover;
-    border-bottom: 1px solid #ddd;
-}
-
-.project-item h3 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #222;
-    margin: 5px 140px;
-    text-decoration: none;
-    border-bottom: 2px solid #575757;
-    padding-top: 10px;
-    padding-bottom: 5px;
-}
-
-.project-item p {
-    margin: 15px;
-    color: #333;
-}
-
-.project-item .view-project {
-    margin-top: auto;
+    height: auto;
     display: block;
-    padding: 15px 0;
-    font-size: 1rem;
+}
+
+.blog-post h3 {
+    font-size: 1.2rem; /* Adjust title size */
     font-weight: bold;
-    color: #fff;
+    color: #333;
+    margin-top: 0; /* Remove extra spacing above the title */
+    margin-left: 15px;
+    margin-bottom: 0; /* Add consistent spacing below the title */
+    text-align: left; /* Center-align the title */
+}
+
+.blog-post p {
+    padding: 0 15px 15px;
+    color: #666;
+    line-height: 1.5;
+}
+
+.blog-post a {
+    display: inline-block;
+    margin: 0 15px 15px;
+    padding: 10px 15px;
     background-color: #007bff;
+    color: #fff;
     text-decoration: none;
-    border-radius: 0 0 8px 8px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.blog-post a:hover {
+    background-color: #0056b3;
 }
 
 /* Footer */
@@ -302,9 +334,5 @@ footer .container {
     nav ul li {
         margin-left: 0;
         margin-bottom: 10px;
-    }
-
-    .projects-grid {
-        grid-template-columns: 1fr;
     }
 }
